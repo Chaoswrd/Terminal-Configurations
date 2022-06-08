@@ -20,4 +20,3 @@ set noswapfile
 set hlsearch
 " Show search results as you type
 set incsearch
-~               
