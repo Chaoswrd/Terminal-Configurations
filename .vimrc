@@ -20,3 +20,5 @@ set noswapfile
 set hlsearch
 " Show search results as you type
 set incsearch
+" Set spelling language
+" set spell spelllang=en_gb
