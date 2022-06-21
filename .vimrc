@@ -10,10 +10,15 @@ set shiftwidth=2
 " set number
 " Syntax highlightning
 syntax on
-" map esc to jk  
-inoremap jk <ESC/
 " remap the leader key
 let mapleader = "'"
+" map esc to jk  
+inoremap jk <ESC>
+inoremap <ESC> <NOP>
+" Fuzzy search file names
+nnoremap <silent> <C-p> :Files<CR>
+" Fuzzy search in files
+nnoremap <silent> <leader>f :Rg<CR>
 " disable the swapfile
 set noswapfile
 " highlight all results
@@ -22,3 +27,7 @@ set hlsearch
 set incsearch
 " Set spelling language
 " set spell spelllang=en_gb
+call plug#begin()
+Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+call plug#end()
