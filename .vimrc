@@ -1,4 +1,7 @@
+filetype plugin on
 filetype plugin indent on
+syntax enable
+set encoding=utf-8
 " On pressing tab, insert 2 spaces
 set expandtab
 " show existing tab with 2 spaces width
@@ -28,6 +31,18 @@ set incsearch
 " Set spelling language
 " set spell spelllang=en_gb
 call plug#begin()
-Plug 'junegunn/fzf.vim'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+
+" Plug 'junegunn/fzf.vim'
+Plug 'lervag/vimtex'
+let g:tex_flavor='latex'
+let g:vimtex_view_method='zathura'
+let g:vimtex_quickfix_mode=0
+set conceallevel=1
+let g:tex_conceal='abdmg'
+Plug 'sirver/ultisnips'
+" Ultisnips shortcuts
+let g:UltiSnipsExpandTrigger = '<tab>'
+let g:UltiSnipsJumpForwardTrigger = '<tab>'
+let g:UltiSnipsJumpBackwardTrigger = '<ctrl-tab>'
+" Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 call plug#end()
