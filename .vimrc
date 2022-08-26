@@ -31,7 +31,7 @@ set incsearch
 " Set spelling language
 " set spell spelllang=en_gb
 call plug#begin()
-
+" You must run :PlugInstall
 " Plug 'junegunn/fzf.vim'
 Plug 'lervag/vimtex'
 let g:tex_flavor='latex'
