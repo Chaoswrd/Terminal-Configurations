@@ -2,9 +2,44 @@ snippet ff "The LaTeX \frac{}{} command" i
 \frac{$1}{$2}$0
 endsnippet
 
+snippet in "The LaTeX \in symbol" i
+\in
+endsnippet
+
+snippet cmd "Most LaTeX commands are written as \text{}" i
+\\$1{$2}
+endsnippet
+
+snippet sub "The LaTeX \subsection*{} command" i
+\subsection*{$1}
+endsnippet
+
 snippet env "New LaTeX environment" b
 \begin{$1}
-    $2
+	$2
 \end{$1}
-$0
+endsnippet
+
+snippet $ "An inline math mode environment" i
+\$ $1 \$
+endsnippet
+
+snippet ( "Correctly formatted parenthesis" i
+\left( $1 \right)
+endsnippet
+
+snippet Z "The symbol for the integers" i
+\mathds{Z}
+endsnippet
+
+snippet Q "The symbol for the rational numbers" i
+\mathds{Q}
+endsnippet
+
+snippet R "The symbol for the real numbers" i
+\mathds{R}
+endsnippet
+
+snippet C "The symbol for the complex numbers" i
+\mathds{C}
 endsnippet
