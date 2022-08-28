@@ -2,8 +2,20 @@ snippet ff "The LaTeX \frac{}{} command" i
 \frac{$1}{$2}$0
 endsnippet
 
+snippet sqrt "The LaTeX \sqrt{} command" i
+\sqrt{$1}
+endsnippet
+
+snippet text "The LaTeX \text{} command" i
+\text{$1}
+endsnippet
+
 snippet in "The LaTeX \in symbol" i
 \in
+endsnippet
+
+snippet neq "The LaTeX \neq symbol" i
+\neq
 endsnippet
 
 snippet cmd "Most LaTeX commands are written as \text{}" i
@@ -14,10 +26,20 @@ snippet sub "The LaTeX \subsection*{} command" i
 \subsection*{$1}
 endsnippet
 
+snippet subsub "The LaTeX \subsubsection*{} command" i
+\subsubsection*{$1}
+endsnippet
+
 snippet env "New LaTeX environment" b
 \begin{$1}
 	$2
 \end{$1}
+endsnippet
+
+snippet [ "A display math mode environment" b
+\[
+	$1
+\]
 endsnippet
 
 snippet $ "An inline math mode environment" i
