@@ -18,6 +18,9 @@ let mapleader = "'"
 " map esc to jk  
 inoremap jk <ESC>
 inoremap <ESC> <NOP>
+vnoremap jk <ESC>
+vnoremap <ESC> <NOP>
+nnoremap zz :update<cr>
 " Fuzzy search file names
 nnoremap <silent> <C-p> :Files<CR>
 " Fuzzy search in files
