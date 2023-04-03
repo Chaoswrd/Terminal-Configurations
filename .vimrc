@@ -14,7 +14,7 @@ set shiftwidth=2
 " Syntax highlightning
 syntax on
 " remap the leader key
-let mapleader = "'"
+let mapleader = "<space>"
 " map esc to jk  
 inoremap jk <ESC>
 inoremap <ESC> <NOP>
