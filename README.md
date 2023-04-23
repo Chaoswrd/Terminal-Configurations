@@ -1,4 +1,4 @@
-# Vim-Configurations
+# Terminal-Configurations
 
 ## Description
-This repository contains my vim configurations. I created this to more easily sync my configurations across systems.
+This repository contains my terminal configurations. I created this to more easily sync my configurations across systems.
