@@ -10,15 +10,16 @@ set softtabstop=2
 " when indenting with '>', use 2 spaces width
 set shiftwidth=2
 " Sets numbers in the side 
-" set number
+set number
+set relativenumber
 " Syntax highlightning
 syntax on
 " remap the leader key
 let mapleader = "<space>"
 " map esc to jk  
 inoremap jk <ESC>
+inoremap JK <ESC>
 inoremap <ESC> <NOP>
-nnoremap zz :update<cr>
 " Fuzzy search file names
 nnoremap <silent> <C-p> :Files<CR>
 " Fuzzy search in files
