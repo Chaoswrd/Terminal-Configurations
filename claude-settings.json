@@ -1,0 +1,133 @@
+{
+    "permissions": {
+        "allow": [
+            "Read(~/Documents/Github/**)",
+            "Edit(~/Documents/Github/**)",
+            "Read(~/Documents/Programming/**)",
+            "Edit(~/Documents/Programming/**)"
+        ],
+        "deny": [
+            "Read(~)",
+            "Read(**/.env)",
+            "Read(**/.env.*)",
+            "Read(**/secrets/**)",
+            "Read(**/credentials/**)",
+            "Read(~/.ssh/**)",
+            "Read(~/.aws/**)",
+            "Read(~/.gnupg/**)",
+            "Read(**/*.pem)",
+            "Read(**/*.key)",
+            "Read(**/*.p12)",
+            "Read(**/*.pfx)",
+            "Read(**/*.cer)",
+            "Read(**/*.crt)",
+            "Read(**/id_rsa)",
+            "Read(**/id_ed25519)",
+            "Read(**/id_ecdsa)",
+            "Read(**/*.secret)",
+            "Read(**/keystore/**)",
+            "Read(~/.netrc)",
+            "Read(**/token)",
+            "Read(**/tokens)",
+            "Edit(~)",
+            "Edit(**/.env)",
+            "Edit(**/.env.*)",
+            "Edit(**/secrets/**)",
+            "Edit(**/credentials/**)",
+            "Edit(~/.ssh/**)",
+            "Edit(~/.aws/**)",
+            "Edit(~/.gnupg/**)",
+            "Edit(**/*.pem)",
+            "Edit(**/*.key)",
+            "Edit(**/*.p12)",
+            "Edit(**/*.pfx)",
+            "Edit(**/*.cer)",
+            "Edit(**/*.crt)",
+            "Edit(**/id_rsa)",
+            "Edit(**/id_ed25519)",
+            "Edit(**/id_ecdsa)",
+            "Edit(**/*.secret)",
+            "Edit(**/keystore/**)",
+            "Edit(~/.netrc)",
+            "Edit(**/token)",
+            "Edit(**/tokens)"
+        ],
+        "defaultMode": "default",
+        "disableBypassPermissionsMode": "disable"
+    },
+    "model": "opus",
+    "enabledPlugins": {
+        "frontend-design@claude-plugins-official": true,
+        "code-simplifier@claude-plugins-official": true,
+        "skill-creator@claude-plugins-official": true,
+        "security-guidance@claude-plugins-official": true,
+        "rust-analyzer-lsp@claude-plugins-official": true
+    },
+    "sandbox": {
+        "enabled": true,
+        "autoAllowBashIfSandboxed": false,
+        "filesystem": {
+            "allowWrite": [
+                "~/Documents/Github",
+                "~/Documents/Programming"
+            ],
+            "denyRead": [
+                "~/.ssh",
+                "~/.aws",
+                "~/.gnupg",
+                "~/.netrc"
+            ]
+        }
+    },
+    "hooks": {
+        "PreToolUse": [
+            {
+                "matcher": "Grep|Glob|Read|Search",
+                "hooks": [
+                    {
+                        "type": "command",
+                        "command": "~/.claude/hooks/cbm-code-discovery-gate"
+                    }
+                ]
+            }
+        ],
+        "SessionStart": [
+            {
+                "matcher": "startup",
+                "hooks": [
+                    {
+                        "type": "command",
+                        "command": "~/.claude/hooks/cbm-session-reminder"
+                    }
+                ]
+            },
+            {
+                "matcher": "resume",
+                "hooks": [
+                    {
+                        "type": "command",
+                        "command": "~/.claude/hooks/cbm-session-reminder"
+                    }
+                ]
+            },
+            {
+                "matcher": "clear",
+                "hooks": [
+                    {
+                        "type": "command",
+                        "command": "~/.claude/hooks/cbm-session-reminder"
+                    }
+                ]
+            },
+            {
+                "matcher": "compact",
+                "hooks": [
+                    {
+                        "type": "command",
+                        "command": "~/.claude/hooks/cbm-session-reminder"
+                    }
+                ]
+            }
+        ]
+    }
+}
